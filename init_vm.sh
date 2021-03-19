@@ -3,15 +3,17 @@
 # Tested on Ubuntu Server
 
 # Update
-echo "Updating..."
 sudo apt update && sudo apt upgrade && sudo apt full-upgrade && sudo apt autoremove && sudo apt purge
+
+# Install software
+sudo apt install git screenfetch net-tools
 
 # Create ~/scripts and populate
 mkdir ~/scripts
-
-# @todo dl update.sh etc
-
+git clone https://github.com/benDotDirectory/linux-server-admin.git ~/scripts
+cd ~/scripts
 chmod +x *.sh
 
-# Downloads
-sudo apt install screenfetch net-tools cowsay fortune
+# @TODO: x11 forwarding
+
+# @TODO: enable ufw
